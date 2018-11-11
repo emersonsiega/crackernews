@@ -3,3 +3,6 @@ secret: mysecret123
 hooks:
   post-deploy:
     - yarn graphql get-schema --project database
+
+#remove this
+endpoint: https://us1.prisma.sh/emerson-siega-ac195c/crackernews-db/dev

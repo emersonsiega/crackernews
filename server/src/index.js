@@ -12,6 +12,8 @@ const resolvers = {
   Feed,
 }
 
+// change endpoint to '__PRISMA_ENDPOINT__'
+
 const server = new GraphQLServer({
   typeDefs: './src/schema.graphql',
   resolvers,
@@ -19,7 +21,7 @@ const server = new GraphQLServer({
     ...req,
     db: new Prisma({
       typeDefs: 'src/generated/prisma.graphql',
-      endpoint: '__PRISMA_ENDPOINT__',
+      endpoint: 'https://us1.prisma.sh/emerson-siega-ac195c/crackernews-db/dev',
       secret: 'mysecret123',
       debug: true
     }),
